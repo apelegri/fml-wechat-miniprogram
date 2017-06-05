@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="header">
+ <view class="h1-header">
+  FML: <text>your ever day life stories</text>
+ </view>
+</view>
+<view class="container">
+ <view class="wrap"> 
+  <block wx:for="{{stories}}" wx:for-item="fml" wx:key="objectId">
+   <view class="card">
+    <view class="card-description">
+     <view class="quote">
+     {{fml.quote}}
+     </view>
+     <view class="fml-upvote">
+
+      <text class="counter">{{fml.upvote}}</text>
+
+      <image class="emoji-logo" src="/image/emoji-joy.png" bindtap="increment" id="{{fml.objectId}}"></image>
+
+    
+      
+   
+     </view>
+    </view>
+   </view>
+  </block>
+ </view>
+</view>
+

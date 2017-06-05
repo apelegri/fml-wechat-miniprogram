@@ -1,0 +1,46 @@
+/**index.wxss**/
+.h1-header text {
+  box-shadow:inset 0px -10px rgba(255, 255, 255, 0.9);
+}
+/* Cards */
+.card {
+  display: flex;
+  min-height: 135px;
+  max-width: 335px;
+  position: relative;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 2px;
+  border-left: 5px solid #32AAE1;
+  box-shadow: 3px 6px 12px 0px rgba(0,0,0,0.1); 
+}
+.card-description {
+  padding: 0 15px;
+  width: 90%;
+  color: black;
+  font-size: 27rpx;
+  line-height: 15px;
+}
+.quote {
+  padding-top:10px;
+}
+
+/* Upvote */
+.fml-upvote { 
+  display: flex;
+  align-items: center;
+  height:40px;
+  padding-top:15px;
+  margin-left:115px;
+}
+.emoji-logo {
+  width:28px;
+  height:28px;
+}
+.counter {
+  font-size: 16px;
+  color: #32AAE1;
+  padding-right: 10px;
+}
+
+

@@ -1,0 +1,24 @@
+<!--pages/new/new.wxml-->
+<view class="header">
+ <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" ></image>
+ <view class="h2-header">Submit your FML</view>
+</view>
+
+<view class="container">
+ <view class="wrap">
+  <view class="desc">Feel like sharing your FML moment with the other FML users? Your instinct was right, because it is good to laugh life off.</view>
+  <form bindsubmit="bindFmlSubmit">
+   <view class="user-input">
+    <view class="text-area-wrap">
+     <textarea placeholder="Name" value="{{userInfo.nickName}}" name="nickName" auto-height />
+    </view>
+   </view>
+   <view class="user-input">
+    <view class="text-area-wrap">
+     <textarea style="input-size"placeholder="Today ... FML" class="input-height" name="quote" maxlength="-1" />
+    </view>
+   </view>
+   <button  style="margin-bottom:50px "type="primary" form-type="submit" loading="{{loading}}">Submit</button>
+  </form>
+ </view>
+</view>
