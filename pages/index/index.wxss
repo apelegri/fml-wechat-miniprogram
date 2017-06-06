@@ -26,12 +26,13 @@
 }
 
 /* Upvote */
-.fml-upvote { 
+.fml-upvote {
+  position: absolute;
+  right: 10px;
+  bottom: 2px;
   display: flex;
   align-items: center;
   height:40px;
-  padding-top:15px;
-  margin-left:115px;
 }
 .emoji-logo {
   width:28px;

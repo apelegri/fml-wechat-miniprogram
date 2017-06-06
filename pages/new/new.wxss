@@ -23,6 +23,11 @@
 .input-label {
   font-size: 35rpx;
 }
+textarea {
+  padding: 20rpx 0;
+  font-size: 35rpx;
+  width: 100%;
+}
 .text-area-wrap {
   padding: 25rpx 25rpx;
   background-color: #fff;

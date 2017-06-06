@@ -2,21 +2,32 @@
 const AV = require('../../utils/av-weapp-min.js');
 const FML = require('../../model/fml.js');
 
-
 Page({
   data: {
     stories: {}
   },
-  onLoad: function () {
+  onLoad: function (option) {
+    console.log(option)
+    // Display toast if form success
+    if (option.FML == 1) {
+      console.log('cest pasé ')
+      wx.showToast({
+        title: 'FML added. Thanks!',
+        icon: 'success',
+        duration: 3000
+      });
+    }
     console.log('on ready')
     new AV.Query('FML')
       .descending('createdAt')
       .find()
       .then(stories => this.setData({ stories }))
       .catch(console.error); 
+    
+    
   },
  increment: function (e) {
-   
+  
    console.log(e.target.id); 
    // get the object ID of the FML clicked by user
 
