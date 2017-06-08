@@ -12,7 +12,7 @@ Page({
     if (option.FML == 1) {
       console.log('cest pasé ')
       wx.showToast({
-        title: 'FML added. Thanks!',
+        title: 'Thanks for sharing!',
         icon: 'success',
         duration: 3000
       });
@@ -23,15 +23,12 @@ Page({
       .find()
       .then(stories => this.setData({ stories }))
       .catch(console.error); 
-    
-    
   },
  increment: function (e) {
-  
+   // Get the object ID of the FML clicked by user
    console.log(e.target.id); 
-   // get the object ID of the FML clicked by user
 
-  // increment in the DB
+   // Increment in the DB
    var fml = new AV.Query('FML')
      .get(e.target.id)
      .then(function (results) {
@@ -39,17 +36,15 @@ Page({
      })
      .catch(console.error);
 
-  // find the object ID in local data storage
-    var select = this.data.stories.findIndex(FML => FML.id === e.target.id)
+   // Find the object ID in local data storage
+   var select = this.data.stories.findIndex(FML => FML.id === e.target.id)
   
-  // increment in the local data storage
+  // Increment in the local data storage
   this.data.stories[select].upvote = this.data.stories[select].upvote + 1
 
-  // update local data
+  // Update local data
   this.setData({
     stories: this.data.stories
   })
-
  }
-
 })

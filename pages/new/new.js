@@ -17,7 +17,15 @@ Page({
       that.setData({
         userInfo: userInfo,
       })
-  
+    });
+    wx.showModal({
+      title: 'Information',
+      content: 'Your story must start with “Today,” and end with “FML”. Don’t use this space for discussions, advertising or spam, or for posting anything which isn’t an FML. ',
+      confirmText: "Ok",
+      showCancel: false,
+      success: function (res) {        
+        console.log('用户点击确定')
+      }
     })
   },
   // New FML Submission
@@ -48,7 +56,7 @@ Page({
         url: '/pages/index/index?FML=1'
       });
     }, 2000);
-    console.log(Form)
+    console.log(FML)
   }
 
 })
