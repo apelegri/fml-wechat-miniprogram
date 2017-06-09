@@ -1,4 +1,10 @@
 /* pages/new/new.wxss */
+.h2-header {
+ color: black;
+  font-size: 50rpx; 
+  font-weight: bold;
+  padding: 10px;
+}
 /* Avatar */
 .userinfo-avatar {
   width:180rpx;
@@ -6,12 +12,7 @@
   margin:20rpx;
   border-radius:50%;
 }
-.h2-header {
- color: black;
-  font-size: 50rpx; 
-  font-weight: bold;
-  padding: 10px;
-}
+
 /* form style */
 .user-input {
   width: 100%;

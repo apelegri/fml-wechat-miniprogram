@@ -7,17 +7,15 @@ Page({
     stories: {}
   },
   onLoad: function (option) {
-    console.log(option)
     // Display toast if form success
     if (option.FML == 1) {
-      console.log('cest pasé ')
       wx.showToast({
         title: 'Thanks for sharing!',
         icon: 'success',
         duration: 3000
       });
     }
-    console.log('on ready')
+    // Fetch data from Leancloud
     new AV.Query('FML')
       .descending('createdAt')
       .find()
@@ -27,7 +25,7 @@ Page({
  increment: function (e) {
    // Get the object ID of the FML clicked by user
    console.log(e.target.id); 
-
+   
    // Increment in the DB
    var fml = new AV.Query('FML')
      .get(e.target.id)
@@ -35,7 +33,7 @@ Page({
        results.increment('upvote',1).save();
      })
      .catch(console.error);
-
+   
    // Find the object ID in local data storage
    var select = this.data.stories.findIndex(FML => FML.id === e.target.id)
   

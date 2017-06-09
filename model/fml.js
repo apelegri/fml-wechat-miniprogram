@@ -1,15 +1,16 @@
 const AV = require('../utils/av-weapp-min.js');
 
 class FML extends AV.Object {
-  // allows to read local data
+  // It allows to read local data
   get upvote() {
     return this.get('upvote');
   }
-  // allows to update local data
+  // It allows to update local data
   set upvote(value) {
     this.set('upvote', value);
   }
 }
 
+// Export object 
 AV.Object.register(FML, 'FML');
 module.exports = FML;

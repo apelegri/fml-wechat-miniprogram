@@ -10,10 +10,8 @@ Page({
   },
   // Retrieve user info
   onLoad: function () {
-    console.log('FML page loaded')
     var that = this
     app.getUserInfo(function (userInfo) {
-      console.log('aaa')
       that.setData({
         userInfo: userInfo,
       })
@@ -24,7 +22,7 @@ Page({
       confirmText: "Ok",
       showCancel: false,
       success: function (res) {        
-        console.log('用户点击确定')
+        console.log('success')
       }
     })
   },
@@ -58,7 +56,6 @@ Page({
     }, 2000);
     console.log(FML)
   }
-
 })
 
 

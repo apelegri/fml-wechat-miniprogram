@@ -13,13 +13,8 @@
      {{fml.quote}}
      </view>
      <view class="fml-upvote">
-
       <text class="counter">{{fml.upvote}}</text>
-
-      <image class="emoji-logo" src="/image/emoji-joy.png" bindtap="increment" id="{{fml.objectId}}"></image>
-
-    
-      
+      <image class="emoji-logo" src="/image/emoji-joy.png" bindtap="increment" id="{{fml.objectId}}"></image>  
      </view>
     </view>
    </view>
